@@ -1,0 +1,76 @@
+:root {
+  --ink: #1c1b19;
+  --muted: #6a665e;
+  --paper: #faf8f4;
+  --rule: #e2ddd3;
+  --accent: #8a4b1f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece8e0;
+    --muted: #a39d92;
+    --paper: #171614;
+    --rule: #33302b;
+    --accent: #e0a26f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 4rem;
+}
+
+.tag {
+  margin: 0 0 0.75rem;
+  font: 600 0.75rem/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tag a { color: inherit; text-decoration: none; }
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin: 2.5rem 0 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font: 600 1rem/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+
+.lead { font-size: 1.15rem; color: var(--muted); }
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font: 0.875rem/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--muted);
+}
+
+footer span { margin: 0 0.5rem; }
